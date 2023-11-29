@@ -60,20 +60,20 @@
 				              	<p class="description">las funciones son de primera clase, lo que significa que pueden ser tratadas como cualquier otro objeto, como enteros, cadenas o listas. Esto permite que las funciones se pasen como argumentos a otras funciones, se devuelvan como valores desde funciones, se asignen a variables y se almacenen en estructuras de datos</p>
 				              	<p class="description">Ejemplo:
 				              		<br>
-				              		def aplicar_operacion(func, x):
-										    return func(x)
+				              		def aplicar_operacion(func, x):<br>
+										    return func(x)<br>
 
-										def cuadrado(n):
-										    return n * n
+										def cuadrado(n):<br>
+										    return n * n<br>
 
-										def doble(n):
-										    return n * 2
+										def doble(n):<br>
+										    return n * 2<br>
 
-										resultado_cuadrado = aplicar_operacion(cuadrado, 5)
-										resultado_doble = aplicar_operacion(doble, 3)
+										resultado_cuadrado = aplicar_operacion(cuadrado, 5)<br>
+										resultado_doble = aplicar_operacion(doble, 3)<br>
 
-										print(resultado_cuadrado)  # Salida: 25
-										print(resultado_doble)     # Salida: 6
+										print(resultado_cuadrado)  # Salida: 25<br>
+										print(resultado_doble)     # Salida: 6<br>
 				              	</p>
 
 		                </div>
@@ -85,30 +85,30 @@
 				              		<br>
 				              		Recursion:
 				              		<br>
-				              		def factorial_recursivo(n):
-									 	# Caso base: factorial de 0 es 1
-									    if n == 0:
-									        return 1
-									    # Caso recursivo: n! = n * (n-1)!
-									    else:
-									        return n * factorial_recursivo(n - 1)
+				              		def factorial_recursivo(n):<br>
+									 	# Caso base: factorial de 0 es 1<br>
+									    if n == 0:<br>
+									        return 1<br>
+									    # Caso recursivo: n! = n * (n-1)!<br>
+									    else:<br>
+									        return n * factorial_recursivo(n - 1)<br>
 
-									# Ejemplo de uso
-									resultado_recursivo = factorial_recursivo(5)
-									print(f"Factorial (recursivo) de 5: {resultado_recursivo}")
+									# Ejemplo de uso<br>
+									resultado_recursivo = factorial_recursivo(5)<br>
+									print(f"Factorial (recursivo) de 5: {resultado_recursivo}")<br>
 									<br>
 									iteracion:
 									<br>
-									def factorial_iterativo(n):
-									    resultado = 1
-									    # Iteración desde 1 hasta n
-									    for i in range(1, n + 1):
-									        resultado *= i
-									    return resultado
+									def factorial_iterativo(n):<br>
+									    resultado = 1<br>
+									    # Iteración desde 1 hasta n<br>
+									    for i in range(1, n + 1):<br>
+									        resultado *= i<br>
+									    return resultado<br>
 
-									# Ejemplo de uso
-									resultado_iterativo = factorial_iterativo(5)
-									print(f"Factorial (iterativo) de 5: {resultado_iterativo}
+									# Ejemplo de uso<br>
+									resultado_iterativo = factorial_iterativo(5)<br>
+									print(f"Factorial (iterativo) de 5: {resultado_iterativo}<br>
 				              	</p>
 		                </div>
 
@@ -119,25 +119,25 @@
 				              		<br>
 				              		Recorrer una lista:
 				              		<br>
-				              		mi_lista = [1, 2, 3, 4, 5]
+				              		mi_lista = [1, 2, 3, 4, 5]<br>
 
-									for elemento in mi_lista:
-									    print(elemento)
+									for elemento in mi_lista:<br>
+									    print(elemento)<br>
 									<br>
 									Concatenación de Listas:
 									<br>
-									lista1 = [1, 2, 3]
-									lista2 = [4, 5, 6]
+									lista1 = [1, 2, 3]<br>
+									lista2 = [4, 5, 6]<br>
 
-									concatenada = lista1 + lista2
+									concatenada = lista1 + lista2<br>
 									print(concatenada)  # Salida: [1, 2, 3, 4, 5, 6]
 									<br>
 									Eliminar Elementos Duplicados
 									<br>
-									duplicada = [1, 2, 2, 3, 4, 4, 5]
-									sin_duplicados = list(set(duplicada))
+									duplicada = [1, 2, 2, 3, 4, 4, 5]<br>
+									sin_duplicados = list(set(duplicada))<br>
 
-									print(sin_duplicados)  # Salida: [1, 2, 3, 4, 5]
+									print(sin_duplicados)  # Salida: [1, 2, 3, 4, 5]<br>
 				              	</p>
 		                </div>
 
@@ -148,16 +148,16 @@
 				              		<br>
 				              		Función Pura:
 				              		<br>
-				              		# Función pura
-									def suma(a, b):
-									    return a + b
+				              		# Función pura<br>
+									def suma(a, b):<br>
+									    return a + b<br>
 
-									# Ejemplos de uso
-									resultado1 = suma(3, 5)
-									resultado2 = suma(3, 5)
+									# Ejemplos de uso<br>
+									resultado1 = suma(3, 5)<br>
+									resultado2 = suma(3, 5)<br>
 
-									print(resultado1)  # Salida: 8
-									print(resultado2)  # Salida: 8
+									print(resultado1)  # Salida: 8<br>
+									print(resultado2)  # Salida: 8<br>
 									<br>
 									La función suma es pura porque, dado el mismo conjunto de entradas (a y b), siempre producirá el mismo resultado sin efectos secundarios.
 				              	</p>
@@ -174,36 +174,36 @@
 									* Reduce 
 									<br>
 								<p class="description">Ejemplo:
-									# Ejemplo de map(), filter() y reduce() como funciones de alto orden
-										from functools import reduce
+									# Ejemplo de map(), filter() y reduce() como funciones de alto orden<br>
+										from functools import reduce<br>
 
-										# Función para elevar al cuadrado
-										def cuadrado(x):
-										    return x ** 2
+										# Función para elevar al cuadrado<br>
+										def cuadrado(x):<br>
+										    return x ** 2<br>
 
-										# Función para filtrar números pares
-										def es_par(x):
-										    return x % 2 == 0
+										# Función para filtrar números pares<br>
+										def es_par(x):<br>
+										    return x % 2 == 0<br>
 
-										# Función para sumar elementos de una lista
-										def suma(x, y):
-										    return x + y
+										# Función para sumar elementos de una lista<br>
+										def suma(x, y):<br>
+										    return x + y<br>
 
 										# Lista de números
-										numeros = [1, 2, 3, 4, 5]
+										numeros = [1, 2, 3, 4, 5]<br>
 
-										# Usando map() para aplicar cuadrado a cada elemento
-										cuadrados = list(map(cuadrado, numeros))
+										# Usando map() para aplicar cuadrado a cada elemento<br>
+										cuadrados = list(map(cuadrado, numeros))<br>
 
-										# Usando filter() para obtener números pares
-										pares = list(filter(es_par, numeros))
+										# Usando filter() para obtener números pares<br>
+										pares = list(filter(es_par, numeros))<br>
 
-										# Usando reduce() para sumar los elementos de la lista
-										suma_total = reduce(suma, numeros)
+										# Usando reduce() para sumar los elementos de la lista<br>
+										suma_total = reduce(suma, numeros)<br>
 
-										print(cuadrados)  # [1, 4, 9, 16, 25]
-										print(pares)      # [2, 4]
-										print(suma_total) # 15
+										print(cuadrados)  # [1, 4, 9, 16, 25]<br>
+										print(pares)      # [2, 4]<br>
+										print(suma_total) # 15<br>
 							 </p>
 							</p>
 
@@ -217,12 +217,12 @@
 				              		<br>
 				              		Función lambda:
 				              		<br>
-				              		# Sintaxis básica de una función lambda
+				              		# Sintaxis básica de una función lambda<br>
 									suma = lambda x, y: x + y
-
-									# Uso de la función lambda
-									resultado = suma(3, 5)
-									print(resultado)  # Salida: 8
+<br>
+									# Uso de la función lambda<br>
+									resultado = suma(3, 5)<br>
+									print(resultado)  # Salida: 8<br>
 									<br>
 									En este ejemplo, lambda x, y: x + y es una función lambda que toma dos argumentos (x e y) y devuelve su suma. La función lambda se asigna a la variable suma, y luego puedes usar esa variable como si fuera una función normal.
 				              	</p>
@@ -235,128 +235,128 @@
 				              		<br>
 				              		mein:
 				              		<br>
-				              		from functools import reduce
-									from LoadData import *
+				              		from functools import reduce<br>
+									from LoadData import *<br>
 
-									#ejercicio: map y filter
-									#1. definir una funcion map para convertir el campo nombre de cada estado a miniscula
-									#2. aplicar con map
-									#3. definir una funcion filter para filtrar humedales con estados "en recuperacion"
-									#4. aplicar filter
+									#ejercicio: map y filter<br>
+									#1. definir una funcion map para convertir el campo nombre de cada estado a miniscula<br>
+									#2. aplicar con map<br>
+									#3. definir una funcion filter para filtrar humedales con estados "en recuperacion"<br>
+									#4. aplicar filter<br>
 
-									#solucion
-									#1. definir funcion map para convertir el campo nombre de cada estado a minuscula
+									#solucion<br>
+									#1. definir funcion map para convertir el campo nombre de cada estado a minuscula<br>
 
-									#2. aplicar con map
-									# def minusculas(r):
-									#     return { r["nombre"],
-									#                 r["hectarias"],
-									#                 r["aves"],
-									#                 r["flora"],
-									#                 r["estado"].lower()}
-
-
-									# #3. definir una funcion filter para filtrar humedales con estados "en recuperacion"
-
-									# #4. aplicar filtro
-
-									# def filtroEstado(humedal):
-									#     return humedal["estado"] == "en conservacion"
-
-									# nombreArchivo = input("que archivo vamos a leer? \n")
-									# miDataSe = LoadData(nombreArchivo)
-									# print(miDataSe)
-
-									# dataSetFiltrado = list(filter(filtroEstado, miDataSe))
-									# print("humedal en estado conservacion: \n")
-									# print(dataSetFiltrado)
+									#2. aplicar con map<br>
+									# def minusculas(r):<br>
+									#     return { r["nombre"],<br>
+									#                 r["hectarias"],<br>
+									#                 r["aves"],<br>
+									#                 r["flora"],<br>
+									#                 r["estado"].lower()}<br>
 
 
-									# registro = {"nombre":"PAMPALINDA",
-									#             "direccion":"Calle 5a 62-00",
-									#             "hectarias":20.0,
-									#             "aves":54,
-									#             "flora":37,
-									#             "estado":"En conservación"}
-									# campo_mayus = registro["nombre"].lower()
-									#print("campo nombre a minuscula:")
-									#print(campo_mayus)
+									# #3. definir una funcion filter para filtrar humedales con estados "en recuperacion"<br>
 
-									# miDataSe2 = list(map(minusculas, miDataSe))
-									# print("estado a minuscula: \n")
-									# print(miDataSe2)
+									# #4. aplicar filtro<br>
+
+									# def filtroEstado(humedal):<br>
+									#     return humedal["estado"] == "en conservacion"<br>
+
+									# nombreArchivo = input("que archivo vamos a leer? \n")<br>
+									# miDataSe = LoadData(nombreArchivo)<br>
+									# print(miDataSe)<br>
+
+									# dataSetFiltrado = list(filter(filtroEstado, miDataSe))<br>
+									# print("humedal en estado conservacion: \n")<br>
+									# print(dataSetFiltrado)<br>
 
 
-									#funcion reduce:
-									# def  Misuma(a,b):
-									#     return a+b
+									# registro = {"nombre":"PAMPALINDA",<br>
+									#             "direccion":"Calle 5a 62-00",<br>
+									#             "hectarias":20.0,<br>
+									#             "aves":54,<br>
+									#             "flora":37,<br>
+									#             "estado":"En conservación"}<br>
+									# campo_mayus = registro["nombre"].lower()<br>
+									#print("campo nombre a minuscula:")<br>
+									#print(campo_mayus)<br>
+
+									# miDataSe2 = list(map(minusculas, miDataSe))<br>
+									# print("estado a minuscula: \n")<br>
+									# print(miDataSe2)<br>
+
+
+									#funcion reduce:<br>
+									# def  Misuma(a,b):<br>
+									#     return a+b<br>
 									    
-									# listaNumerosPares = list(range(1,101,))
-									# print("numeros pares")
-									# print(listaNumerosPares)
-									# suma = 0
-									# #seri sumatoria, usando un iterador
-									# for i in listaNumerosPares:
-									#     suma = suma + i
-									# print(suma)
+									# listaNumerosPares = list(range(1,101,))<br>
+									# print("numeros pares")<br>
+									# print(listaNumerosPares)<br>
+									# suma = 0<br>
+									# #seri sumatoria, usando un iterador<br>
+									# for i in listaNumerosPares:<br>
+									#     suma = suma + i<br>
+									# print(suma)<br>
 
-									# listaCadena = ["Muchos", "años", "despues", ",", "frente", "al", "peloton"]
+									# listaCadena = ["Muchos", "años", "despues", ",", "frente", "al", "peloton"]<br>
 
 
-									#serie sumatoria, usando la funcion reduce
-									#sumaTotalReduce = reduce(Misuma, listaNumerosPares)
-									# sumaTotalReduce = reduce(lambda x,y: x+y, listaNumerosPares)
-									# productoTotalReduce = reduce(lambda x,y: x*y , listaNumerosPares)
-									# inicioCienAnioSoledad = reduce(lambda x,y: x+" "+y, listaCadena)
-									# print(f"suma con reduce:{sumaTotalReduce}")
-									# print(f"producto con reduce:{productoTotalReduce}")
-									# print(f"cadena concatenada:{inicioCienAnioSoledad}")
+									#serie sumatoria, usando la funcion reduce<br>
+									#sumaTotalReduce = reduce(Misuma, listaNumerosPares)<br>
+									# sumaTotalReduce = reduce(lambda x,y: x+y, listaNumerosPares)<br>
+									# productoTotalReduce = reduce(lambda x,y: x*y , listaNumerosPares)<br>
+									# inicioCienAnioSoledad = reduce(lambda x,y: x+" "+y, listaCadena)<br>
+									# print(f"suma con reduce:{sumaTotalReduce}")<br>
+									# print(f"producto con reduce:{productoTotalReduce}")<br>
+									# print(f"cadena concatenada:{inicioCienAnioSoledad}")<br>
 
-									def convertirAnios(x):
-									    return {
-									        x["nombre"],
-									        x["Edad"]/12,
-									        x["Edad"]
-									    }
+									def convertirAnios(x):<br>
+									    return {<br>
+									        x["nombre"],<br>
+									        x["Edad"]/12,<br>
+									        x["Edad"]<br>
+									    }<br>
 
-									def filtrarVegetarianos(x):
+									def filtrarVegetarianos(x):<br>
 									    x["Vegetariano"] == True
+<br>
+									listaEstudiantes = [<br>
+									    {"nombre":"Duvan", "Edad":552, "Vegetariano":False},<br>
+									    {"nombre":"ANDRES", "Edad":24, "Vegetariano":False},<br>
+									    {"nombre":"alejandra", "Edad":27, "Vegetariano":True}]<br>
 
-									listaEstudiantes = [
-									    {"nombre":"Duvan", "Edad":552, "Vegetariano":False},
-									    {"nombre":"ANDRES", "Edad":24, "Vegetariano":False},
-									    {"nombre":"alejandra", "Edad":27, "Vegetariano":True}]
+									listtaEdadAnios = list(map(convertirAnios, listaEstudiantes))<br>
+									print(f"map:{listtaEdadAnios}")<br>
 
-									listtaEdadAnios = list(map(convertirAnios, listaEstudiantes))
-									print(f"map:{listtaEdadAnios}")
+									listaVegetarianos = list(filter(lambda x:x["Vegetariano"]==True,listaEstudiantes))<br>
+									listtaEdadAnios = list(map(convertirAnios, listaVegetarianos))<br>
+									print(f"filtro vegetariono:{listtaEdadAnios}")<br>
 
-									listaVegetarianos = list(filter(lambda x:x["Vegetariano"]==True,listaEstudiantes))
-									listtaEdadAnios = list(map(convertirAnios, listaVegetarianos))
-									print(f"filtro vegetariono:{listtaEdadAnios}")
-
-									# listaDatos = reduce(lambda x,y: x["nombre"]+"," y["nombre"], listaEstudiantes)
-									# print(f"cadena estudiante:{listaDatos}")
-									# listaNumeros = list(range(1,100,1))
-									# print("numeros")
-									# print(listaNumeros)
+									# listaDatos = reduce(lambda x,y: x["nombre"]+"," y["nombre"], listaEstudiantes)<br>
+									# print(f"cadena estudiante:{listaDatos}")<br>
+									# listaNumeros = list(range(1,100,1))<br>
+									# print("numeros")<br>
+									# print(listaNumeros)<br>
 									<br>
 									loadData
 									<br>
-									#Funciones para crear un dataset como una lista de tuplas
-									#a partir de un achivo plana
-									#param: la ruta del archiovo plano
-									def LoadData(fileName):
+									#Funciones para crear un dataset como una lista de tuplas<br>
+									#a partir de un achivo plana<br>
+									#param: la ruta del archiovo plano<br>
+									def LoadData(fileName):<br>
 									    dataset = []
-									    with open(fileName, encoding='utf-8') as f:
-									        for line in f: #iterar x cada renglon del archivo
-									            values = line.split(sep=';') #funcion slpit: le estamos indicando que el separador es ;
-									            registro = {"nombre":values[0],
-									                        "direccion":values[1],
-									                        "hectarias":float(values[2]),
-									                        "aves":int(values[3]),
-									                        "flora":int(values[4]),
-									                        "estado":values[5]}
-									            dataset.append(registro)
+									    with open(fileName, encoding='utf-8') as f:<br>
+									        for line in f: #iterar x cada renglon del archivo<br>
+									            values = line.split(sep=';') #funcion slpit: le estamos indicando que el separador es ;<br>
+									            registro = {"nombre":values[0],<br>
+									                        "direccion":values[1],<br>
+									                        "hectarias":float(values[2]),<br>
+									                        "aves":int(values[3]),<br>
+									                        "flora":int(values[4]),<br>
+									                        "estado":values[5]}<br>
+									            dataset.append(registro)<br>
 									    return dataset
 				              	</p>
 		                </div>
