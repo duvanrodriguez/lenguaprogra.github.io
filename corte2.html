@@ -231,7 +231,7 @@
                              <p class="description">Abstract Factory (Fábrica abstracta): Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas. </p><br>
                                 <p class="description">Ejemplo:
                                     <br>
-                                    from abc import ABC, abstractmethod
+                                    from abc import ABC, abstractmethod<br>
 
                                     # Interfaz para la fábrica abstracta<br>
                                     class AbstractFactory(ABC):<br>
@@ -308,7 +308,7 @@
                              <p class="description">Adapter (Adaptador):Permite que la interfaz de una clase existente se utilice como si fuera otra interfaz. </p><br>
                              <p class="description">Ejemplo:
                                     <br>
-                                    # Interfaz Target
+                                    # Interfaz Target<br>
                                     class Target:<br>
                                         def request(self):<br>
                                             pass<br>
@@ -336,7 +336,8 @@
                                 <br>
                              <p class="description">Observer (Observador): Define una dependencia uno a muchos entre objetos para que cuando uno de los objetos cambie su estado, todos sus dependientes sean notificados y actualizados automáticamente. </p><br>
                                 <p class="description">Ejemplo:
-                                    from abc import ABC, abstractmethod
+                                    <br>
+                                    from abc import ABC, abstractmethod<br>
 
                                     # Interfaz Observer<br>
                                     class Observer(ABC):<br>
@@ -382,7 +383,7 @@
                              <p class="description">Strategy (Estrategia): Define una familia de algoritmos, encapsula cada uno y los hace intercambiables. Permite que el algoritmo varíe independientemente de los clientes que lo utilizan. </p><br>
                                 <p class="description">Ejemplo:
                                     <br>
-                                    from abc import ABC, abstractmethod
+                                    from abc import ABC, abstractmethod<br>
 
                                     # Interfaz para la estrategia<br>
                                     class Strategy(ABC):<br>
