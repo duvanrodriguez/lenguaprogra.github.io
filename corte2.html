@@ -118,9 +118,13 @@
                              <p class="description">La herencia permite que una clase herede atributos y métodos de otra clase. En Python, una clase hereda de otra utilizando paréntesis después del nombre de la clase</p>
                              <p class="description">Ejemplo:
                                     <br>
-                                    # Acceder a atributos y llamar a métodos<br>
-                                    print(persona1.nombre)  <br>
-                                    persona2.saludar()
+                                    class Estudiante(Persona):<br>
+                                    def __init__(self, nombre, edad, curso):<br>
+                                        super().__init__(nombre, edad)<br>
+                                        self.curso = curso<br>
+
+                                    def estudiar(self):<br>
+                                        print(f"{self.nombre} está estudiando en el curso {self.curso}.")
 
                                 </p>
                         </div>
@@ -422,6 +426,58 @@
                                     print(result2)  # Salida: "Estrategia concreta 2"<br>
                                 </p>
 		                </div>
+
+                        <div>
+                                <h3>atrones arqui . MVC</h3>
+                                <p class="description">son esquemas estructurales que proporcionan soluciones organizativas y de diseño a nivel de arquitectura para construir aplicaciones. Uno de los patrones arquitectónicos más conocidos es el Modelo-Vista-Controlador (MVC), que busca separar la lógica de presentación y la lógica de negocio en una aplicación.<br>
+                                * Modelo (Model):<br>
+
+                                Representa los datos y la lógica de negocio de la aplicación.<br>
+                                Responde a las solicitudes de información sobre su estado (generalmente desde la Vista).<br>
+                                Puede enviar notificaciones a la Vista si su estado cambia.<br>
+                                * Vista (View):<br>
+
+                                Presenta la información al usuario y maneja la interfaz de usuario.<br>
+                                Recupera datos del Modelo para mostrar al usuario.<br>
+                                Puede enviar comandos al Controlador si el usuario interactúa con la interfaz de usuario.<br>
+                                * Controlador (Controller):<br>
+
+                                Maneja la entrada del usuario y actualiza el Modelo y la Vista según sea necesario.<br>
+                                Interpreta las acciones del usuario y coordina la respuesta adecuada.<br>
+                                </p>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    # Modelo<br>
+                                    class Modelo:<br>
+                                        def __init__(self):<br>
+                                            self.datos = ""<br>
+
+                                        def obtener_datos(self):<br>
+                                            return self.datos<br>
+
+                                    # Vista<br>
+                                    class Vista:<br>
+                                        def mostrar_datos(self, datos):<br>
+                                            print(f"Datos: {datos}")<br>
+
+                                    # Controlador<br>
+                                    class Controlador:<br>
+                                        def __init__(self, modelo, vista):<br>
+                                            self.modelo = modelo<br>
+                                            self.vista = vista<br>
+
+                                        def actualizar_datos(self, nuevos_datos):<br>
+                                            self.modelo.datos = nuevos_datos<br>
+                                            self.vista.mostrar_datos(self.modelo.obtener_datos())<br>
+
+                                    # Uso<br>
+                                    modelo = Modelo()<br>
+                                    vista = Vista()<br>
+                                    controlador = Controlador(modelo, vista)<br>
+
+                                    controlador.actualizar_datos("Nuevos datos")<br>
+                                </p>
+                        </div>
 
 		                <div>
 		                	<h3>Practica en clase  </h3>

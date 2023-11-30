@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Corte 1</title>
+	<title>Corte 3</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/general.css">
@@ -40,7 +40,7 @@
             <div class="row">
         
                 <div class="col-lg-12">
-                    <h1 class="h1-ranked"> A continuación se presenta el contenido que se aprendió en la Unidad 1</h1>
+                    <h1 class="h1-ranked"> A continuación se presenta el contenido que se aprendió en la Unidad 3</h1>
                 </div>
         
                 <div class="col-xs-12 servicios-section">
@@ -49,41 +49,298 @@
                     </a>
                     <div class="caption">
 	                    <div>
-			                <h3>programación funcional Python</h3>
-			                <p class="description">La programación funcional es un paradigma de programación que trata a las computaciones 
-			                    como evaluación de funciones matemáticas y evita cambiar estados y datos mutables. En Python, un lenguaje de 
-			                    programación multiparadigma, también puedes escribir código utilizando enfoques funcionales.</p>
+			                <h3>POO Java</h3>
+			                <p class="description">es un paradigma de programación que utiliza objetos para organizar y estructurar el código. Java es un lenguaje de programación que sigue fuertemente el paradigma de POO.</p>
 	                    </div>
 
-		                <div>
-		                	 	<h3>Funciones como objeto de primero orden</h3>
-				              	<p class="description">pueden ser asignadas a variables, pasadas como argumentos a otras funciones.</p>
-		                </div>
 
 		                <div>
-		                	<h3>Recursión sobre iteración</h3>
-				             <p class="description">La recursión es una técnica común en la programación funcional. Python admite la recursión, pero</p>
-		                </div>
+                            <h3>programación concurrente en java</h3>
+                             <p class="description">se refiere a la capacidad de ejecutar múltiples tareas en paralelo, permitiendo que partes de un programa se ejecuten simultáneamente. Java proporciona varias características y bibliotecas para facilitar la programación concurrente</p>
+                             <br>
+                             <p class="description">Hilos (Threads): Un hilo es una secuencia de ejecución independiente dentro de un programa. Java permite la creación y gestión de hilos utilizando la clase Thread o implementando la interfaz Runnable. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                   public class EjemploHilo {<br>
 
-		                <div>
-		                	<h3>Procesamiento de listas</h3>
-				             <p class="description">El procesamiento de listas es una parte esencial de la programación en Python, y hay varias formas de trabajar con listas</p>
-		                </div>
+                                    // Clase que extiende Thread<br>
+                                    static class MiHilo extends Thread {<br>
+                                        public void run() {<br>
+                                            for (int i = 0; i < 5; i++) {<br>
+                                                try {<br>
+                                                    Thread.sleep(1000); // Simular una tarea que lleva tiempo<br>
+                                                } catch (InterruptedException e) {<br>
+                                                    e.printStackTrace();<br>
+                                                }<br>
+                                                System.out.println("Número: " + i);<br>
+                                            }<br>
+                                        }<br>
+                                    }<br>
 
-		                <div>
-		                	<h3>Funciones puras</h3>
-				             <p class="description">Las funciones puras no tienen efectos secundarios y siempre producen el mismo</p>
-		                </div>
+                                    // Clase que implementa Runnable<br>
+                                    static class MiRunnable implements Runnable {<br>
+                                        public void run() {<br>
+                                            for (char letra : new char[]{'a', 'b', 'c'}) {<br>
+                                                try {<br>
+                                                    Thread.sleep(500);<br>
+                                                } catch (InterruptedException e) {<br>
+                                                    e.printStackTrace();<br>
+                                                }<br>
+                                                System.out.println("Letra: " + letra);<br>
+                                            }<br>
+                                        }<br>
+                                    }<br>
 
-		                <div>
-		                	<h3>Funciones de alto orden</h3>
-				             <p class="description">puedes pasar funciones como argumentos a otras funciones y devolver funciones</p>
-		                </div>
+                                    public static void main(String[] args) {<br>
+                                        // Crear e iniciar un hilo que extiende Thread<br>
+                                        MiHilo miHilo = new MiHilo();<br>
+                                        miHilo.start();<br>
 
-		                <div>
-		                	<h3>Funciones lambda</h3>
-				             <p class="description">Las expresiones lambda permiten crear funciones anónimas y se utilizan </p>
-		                </div>
+                                        // Crear e iniciar un hilo que implementa Runnable<br>
+                                        Thread miHiloRunnable = new Thread(new MiRunnable());<br>
+                                        miHiloRunnable.start();<br>
+
+                                        // Realizar otras tareas en el hilo principal<br>
+                                        for (int i = 0; i < 3; i++) {<br>
+                                            System.out.println("Tarea en el hilo principal");<br>
+                                            try {<br>
+                                                Thread.sleep(1000);<br>
+                                            } catch (InterruptedException e) {<br>
+                                                e.printStackTrace();<br>
+                                            }<br>
+                                        }<br>
+
+                                        System.out.println("Programa principal finalizado.");<br>
+                                    }<br>
+                                }<br>
+                                </p>
+                                <br>
+                             <p class="description">Métodos sincronizados: son aquellos que han sido marcados con la palabra clave synchronized. Esta característica permite que solo un hilo ejecute el método sincronizado a la vez. La sincronización es esencial para evitar condiciones de carrera y mantener la consistencia de datos compartidos entre varios hilos. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    public class EjemploSincronizacionBloque {<br>
+                                        private int contador = 0;<br>
+                                        private Object cerrojo = new Object();<br>
+
+                                        public void incrementar() {<br>
+                                            // Bloque sincronizado<br>
+                                            synchronized (cerrojo) {<br>
+                                                contador++;<br>
+                                            }<br>
+                                        }<br>
+                                    }
+                                </p>
+                                <br>
+                             <p class="description">Candados implícitos: uso del cerrojo intrínseco asociado a cada objeto para implementar la sincronización en métodos o bloques de código. Cada objeto en Java tiene un cerrojo asociado internamente, y este cerrojo puede ser utilizado para lograr la sincronización. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    public class EjemploSincronizacionBloque {<br>
+                                        private int contador = 0;<br>
+
+                                        public void incrementar() {<br>
+                                            // Bloque sincronizado utilizando el cerrojo intrínseco<br>
+                                            synchronized (this) {<br>
+                                                contador++;<br>
+                                            }<br>
+                                        }<br>
+                                    }
+
+                                </p>
+                             <br>
+                             <p class="description">Volatile:se utiliza para indicar que una variable puede ser modificada por múltiples hilos simultáneamente. Al declarar una variable como volatile, se garantiza que las lecturas y escrituras de esa variable son atómicas y que no se realizan optimizaciones de caché que podrían interferir con la operación de múltiples hilos. </p><br>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    public class EjemploVolatile {<br>
+                                        private volatile boolean bandera = false;<br>
+
+                                        public void cambiarBandera() {<br>
+                                            bandera = true;<br>
+                                        }<br>
+
+                                        public void imprimirMensaje() {<br>
+                                            while (!bandera) {<br>
+                                                System.out.println("Esperando a que la bandera cambie...");<br>
+                                            }<br>
+                                            System.out.println("La bandera ha cambiado.");<br>
+                                        }<br>
+
+                                        public static void main(String[] args) {<br>
+                                            EjemploVolatile ejemplo = new EjemploVolatile();<br>
+
+                                            // Hilo que cambia la bandera<br>
+                                            new Thread(() -> {<br>
+                                                try {<br>
+                                                    Thread.sleep(2000); // Simula alguna operación que toma tiempo<br>
+                                                } catch (InterruptedException e) {<br>
+                                                    e.printStackTrace();<br>
+                                                }<br>
+                                                ejemplo.cambiarBandera();<br>
+                                            }).start();<br>
+
+                                            // Hilo que imprime el mensaje<br>
+                                            new Thread(() -> {<br>
+                                                ejemplo.imprimirMensaje();<br>
+                                            }).start();<br>
+                                        }<br>
+                                    }
+                                </p>
+                                <br>
+                             <p class="description">Interferencia entre hilos contención: Cuando múltiples hilos comparten recursos o datos, puede producirse una situación conocida como "contención" o "interferencia entre hilos". La contención ocurre cuando dos o más hilos intentan acceder o modificar un recurso compartido al mismo tiempo. Esta situación puede llevar a resultados inesperados y errores en el programa. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    public class EjemploInterferencia {<br>
+
+                                        static class Contador {<br>
+                                            private int valor = 0;<br>
+
+                                            // Método sin sincronización<br>
+                                            void incrementar() {<br>
+                                                valor++;<br>
+                                            }<br>
+
+                                            // Método sincronizado para evitar interferencia y contención<br>
+                                            synchronized void incrementarSincronizado() {<br>
+                                                valor++;<br>
+                                            }<br>
+
+                                            int getValor() {<br>
+                                                return valor;<br>
+                                            }<br>
+                                        }<br>
+
+                                        static class MiHilo implements Runnable {<br>
+                                            private Contador contador;<br>
+
+                                            MiHilo(Contador contador) {<br>
+                                                this.contador = contador;<br>
+                                            }<br>
+
+                                            public void run() {<br>
+                                                for (int i = 0; i < 10000; i++) {<br>
+                                                    // Descomentar la línea correspondiente para ver la interferencia o contención<br>
+                                                    // contador.incrementar(); // Interferencia y contención<br>
+                                                    contador.incrementarSincronizado(); // Sin interferencia ni contención<br>
+                                                }<br>
+                                            }<br>
+                                        }<br>
+
+                                        public static void main(String[] args) throws InterruptedException {<br>
+                                            Contador contador = new Contador();<br>
+
+                                            // Crear dos hilos que incrementan el contador sin sincronización<br>
+                                            Thread hilo1 = new Thread(new MiHilo(contador));<br>
+                                            Thread hilo2 = new Thread(new MiHilo(contador));<br>
+
+                                            hilo1.start();<br>
+                                            hilo2.start();<br>
+
+                                            hilo1.join();<br>
+                                            hilo2.join();<br>
+
+                                            // Imprimir el resultado final<br>
+                                            System.out.println("Valor final del contador: " + contador.getValor());<br>
+                                        }<br>
+                                    }
+                                </p>
+                                <br>
+                        </div>
+                        <div>
+                            <h3>Practica en clase  </h3>
+                             <p class="description">Con la breve explicacion que ya tuvimos anteriormente, durante la unidad se practicó un proyecto en el cual se aplicaban los conocimientos adquiridos en el trascurso del corte, aca podrán visualizar parte del código. </p>
+                             <p class="description">Hilos:<br>
+                                *archivo = Account.java <br>
+                                package concurrenciaCorte3;<br>
+
+                                /**<br>
+                                 *<br>
+                                 * @author estudiante<br>
+                                 */<br>
+                                public class Account {<br>
+                                    
+                                    private float balance;<br>
+                                    
+                                    
+                                    public Account(float initialBalance)<br>
+                                    {<br>
+                                        this.balance = initialBalance;<br>
+                                    }<br>
+                                    public  float  getBalance(){<br>
+                                            return  balance;<br>
+                                        }<br>
+                                    /**<br>
+                                     * retiro<br>
+                                     * @param amount<br>
+                                     */<br>
+                                    public void withdraw(float amount)<br>
+                                    {<br>
+                                        //validar balance >= valor a retirar<br>
+                                        balance -= amount;<br>
+                                    }<br>
+                                    
+                                    /**<br>
+                                     * depósito<br>
+                                     * @param amount<br>
+                                     */<br>
+                                    public void deposit(float amount)<br>
+                                    {<br>
+                                        balance += amount;<br>
+                                    }<br>
+
+                                }<br>
+                                archivo = MainClas.java <br>
+                                package concurrenciaCorte3;<br>
+
+                                /**<br>
+                                 *<br>
+                                 * @author estudiante<br>
+                                 */<br>
+                                public class MainClass {<br>
+                                    
+                                    public void run(){<br>
+                                        System.out.println("Ejecutando hilo"+Thread.currentThread().getId());<br>
+                                    }<br>
+                                    
+                                    public static void main(String[] args)<br>
+                                    {<br>
+                                        Account myAccount = new Account(50000000);<br>
+                                        
+                                                //1. crar 2 hilos para las dos operaciones de la cuanta<br>
+                                                Thread hiloRetiro = new Thread( ()-> myAccount.withdraw(200000));<br>
+                                                Thread hiloDeposito = new Thread( ()-> myAccount.deposit(50000));<br>
+                                                
+                                                Thread[] hiloReTiro =  new Thread[8];<br>
+                                                for (int i = 0; i < hiloReTiro.length; i++) {<br>
+                                                hiloReTiro[i] = new Thread( ()-> myAccount.withdraw(1000000));<br>
+                                                hiloReTiro[i].start();<br>
+                                            }<br>
+                                                //2. inicializar los hilos<br>
+                                                hiloRetiro.start();<br>
+                                                hiloDeposito.start();<br>
+                                                
+                                                //3. unir los hilos a este hilo principal (main)<br>
+                                                
+                                                try {<br>
+                                                hiloDeposito.join();<br>
+                                                hiloRetiro.join();<br>
+                                                
+                                                for(Thread t: hiloReTiro){<br>
+                                                    t.join();<br>
+                                                    System.out.println("hilo con id: " + t.getId());<br>
+                                                }<br>
+                                            } catch (InterruptedException e) {<br>
+                                               e.printStackTrace();<br>
+                                            }<br>
+                                                System.out.println("balance final:"+myAccount.getBalance());<br>
+                                                
+                                        //operaciones secuenciales:<br>
+                                        
+                                        
+                                        myAccount.deposit(500000);<br>
+                                        myAccount.withdraw(40000);<br>
+                                    }<br>
+                                }
+                             </p>
+                        </div>
 
                   </div>
                 </div>
