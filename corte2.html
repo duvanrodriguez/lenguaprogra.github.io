@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Corte 1</title>
+	<title>Corte 2</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/general.css">
@@ -40,7 +40,7 @@
             <div class="row">
         
                 <div class="col-lg-12">
-                    <h1 class="h1-ranked"> A continuación se presenta el contenido que se aprendió en la Unidad 1</h1>
+                    <h1 class="h1-ranked"> A continuación se presenta el contenido que se aprendió en la Unidad 2</h1>
                 </div>
         
                 <div class="col-xs-12 servicios-section">
@@ -49,41 +49,504 @@
                     </a>
                     <div class="caption">
 	                    <div>
-			                <h3>programación funcional Python</h3>
-			                <p class="description">La programación funcional es un paradigma de programación que trata a las computaciones 
-			                    como evaluación de funciones matemáticas y evita cambiar estados y datos mutables. En Python, un lenguaje de 
-			                    programación multiparadigma, también puedes escribir código utilizando enfoques funcionales.</p>
+			                <h3>POO en Python</h3>
+			                <p class="description">La Programación Orientada a Objetos (POO) es un paradigma de programación que se basa en el concepto de "objetos", que pueden contener datos en forma de campos, a menudo conocidos como atributos, y código, en forma de procedimientos, a menudo conocidos como métodos. Python es un lenguaje que admite la programación orientada a objetos y proporciona muchas características para trabajar con ella</p>
 	                    </div>
 
 		                <div>
-		                	 	<h3>Funciones como objeto de primero orden</h3>
-				              	<p class="description">pueden ser asignadas a variables, pasadas como argumentos a otras funciones.</p>
+		                	 	<h3>Clases</h3>
+				              	<p class="description">es un plano o plantilla que define un tipo de objeto. Una clase encapsula datos (atributos) y funciones (métodos) que operan en esos datos. Puedes pensar en una clase como un prototipo para la creación de objetos.</p>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    class Persona:<br>
+                                    def __init__(self, nombre, edad):<br>
+                                        self.nombre = nombre<br>
+                                        self.edad = edad<br>
+
+                                    def saludar(self):<br>
+                                        print(f"Hola, soy {self.nombre} y tengo {self.edad} años.
+                                </p>
 		                </div>
 
 		                <div>
-		                	<h3>Recursión sobre iteración</h3>
-				             <p class="description">La recursión es una técnica común en la programación funcional. Python admite la recursión, pero</p>
+		                	<h3>Objetos</h3>
+				             <p class="description">es una instancia específica de una clase. Puedes crear múltiples objetos a partir de la misma clase, y cada objeto tendrá sus propios valores para los atributos</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    persona1 = Persona("Alice", 30)<br>
+                                    persona2 = Persona("Bob", 25)<br>
+
+                                    print(persona1.nombre)  <br>
+                                    persona2.saludar()<br>
+
+                                </p>
 		                </div>
 
+                        <div>
+                            <h3>Atributos y Métodos</h3>
+                             <p class="description">Los atributos son variables asociadas con la clase u objeto, y los métodos son funciones asociadas</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    class Estudiante(Persona):<br>
+                                    def __init__(self, nombre, edad, curso):<br>
+                                        super().__init__(nombre, edad)<br>
+                                        self.curso = curso<br>
+
+                                    def estudiar(self):<br>
+                                        print(f"{self.nombre} está estudiando en el curso {self.curso}.")
+
+                                </p>
+                        </div>
+
+                        <div>
+                            <h3>Encapsulamiento</h3>
+                             <p class="description">En Python, la encapsulación se logra utilizando convenciones de nomenclatura y, en algunos casos, mediante el uso de atributos y métodos privados.</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    class CuentaBancaria:<br>
+                                    def __init__(self, saldo):<br>
+                                        self.__saldo = saldo  # __saldo es un atributo privado<br>
+
+                                    def obtener_saldo(self):<br>
+                                        return self.__saldo
+
+                                </p>
+                        </div>
+
+                        <div>
+                            <h3>Herencia</h3>
+                             <p class="description">La herencia permite que una clase herede atributos y métodos de otra clase. En Python, una clase hereda de otra utilizando paréntesis después del nombre de la clase</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    # Acceder a atributos y llamar a métodos<br>
+                                    print(persona1.nombre)  <br>
+                                    persona2.saludar()
+
+                                </p>
+                        </div>
+
+                        <div>
+                            <h3>Polimorfismo</h3>
+                             <p class="description">El polimorfismo permite que objetos de diferentes clases sean tratados como objetos de una misma clase base.</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    def imprimir_detalle(objeto):<br>
+                                        print(objeto.detalle())<br>
+
+                                    # Polimorfismo en acción<br>
+                                    imprimir_detalle(persona1)<br>
+                                    imprimir_detalle(estudiante1)
+
+                                </p>
+                        </div>
+
 		                <div>
-		                	<h3>Procesamiento de listas</h3>
+		                	<h3>DRY = Don’t Repeat Yourself</h3>
 				             <p class="description">El procesamiento de listas es una parte esencial de la programación en Python, y hay varias formas de trabajar con listas</p>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    # Enfoque no DRY<br>
+                                    def operacion_a():<br>
+                                        # lógica específica de operación_a<br>
+                                        pass<br>
+
+                                    def operacion_b():<br>
+                                        # lógica específica de operación_b<br>
+                                        pass
+                                        <br>
+                                        <p>Sería preferible definir una función o clase que encapsule la lógica común</p>
+                                        <br>
+                                        # Enfoque DRY<br>
+                                    def operacion_comun():<br>
+                                        # lógica común a operación_a y operacion_b<br>
+                                        pass<br>
+
+                                    def operacion_a():<br>
+                                        operacion_comun()<br>
+                                        # lógica específica de operación_a<br>
+                                        pass<br>
+
+                                    def operacion_b():<br>
+                                        operacion_comun()<br>
+                                        # lógica específica de operación_b<br>
+                                        pass
+                                </p>
 		                </div>
 
 		                <div>
-		                	<h3>Funciones puras</h3>
-				             <p class="description">Las funciones puras no tienen efectos secundarios y siempre producen el mismo</p>
+		                	<h3>Patrones de diseño</h3>
+				             <p class="description">Los patrones de diseño son soluciones generales y reutilizables para problemas recurrentes en el diseño de software. Estos patrones proporcionan un enfoque probado y estructurado para resolver ciertos problemas y mejorar la eficiencia del diseño del software. No son fragmentos de código o bibliotecas que puedes simplemente incluir en tu aplicación, sino más bien pautas y conceptos para abordar ciertos tipos de problemas</p>
+                             <br>
+                             <p class="description">Singleton (Singleton): Garantiza que una clase tenga solo una instancia y proporciona un punto de acceso global a esa instancia. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    class Singleton:<br>
+                                    _instance = None<br>
+
+                                    def __new__(cls):<br>
+                                        if cls._instance is None:<br>
+                                            cls._instance = super(Singleton, cls).__new__(cls)<br>
+                                        return cls._instance<br>
+
+                                # Uso del Singleton<br>
+                                singleton_1 = Singleton()<br>
+                                singleton_2 = Singleton()<br>
+
+                                print(singleton_1 is singleton_2)
+                                </p>
+                                <br>
+                             <p class="description">Factory Method (Método de fábrica): Define una interfaz para crear un objeto, pero deja que las subclases alteren el tipo de objetos que se crearán. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    from abc import ABC, abstractmethod<br>
+
+                                    # Interfaz para crear productos<br>
+                                    class Creator(ABC):<br>
+                                        @abstractmethod<br>
+                                        def factory_method(self):<br>
+                                            pass<br>
+
+                                    # Clase concreta que implementa la interfaz<br>
+                                    class ConcreteCreator(Creator):<br>
+                                        def factory_method(self):<br>
+                                            return ConcreteProduct()<br>
+
+                                    # Interfaz para los productos<br>
+                                    class Product(ABC):<br>
+                                        @abstractmethod<br>
+                                        def operation(self):<br>
+                                            pass<br>
+
+                                    # Clase concreta que implementa un producto<br>
+                                    class ConcreteProduct(Product):<br>
+                                        def operation(self):<br>
+                                            return "Producto concreto"<br>
+
+                                    # Uso del Factory Method<br>
+                                    creator = ConcreteCreator()<br>
+                                    product = creator.factory_method()<br>
+                                    print(product.operation())
+                                </p>
+                                <br>
+                             <p class="description">Abstract Factory (Fábrica abstracta): Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    from abc import ABC, abstractmethod
+
+                                    # Interfaz para la fábrica abstracta<br>
+                                    class AbstractFactory(ABC):<br>
+                                        @abstractmethod<br>
+                                        def create_product_a(self):<br>
+                                            pass<br>
+
+                                        @abstractmethod<br>
+                                        def create_product_b(self):<br>
+                                            pass<br>
+
+                                    # Clases concretas que implementan la fábrica abstracta<br>
+                                    class ConcreteFactory1(AbstractFactory):<br>
+                                        def create_product_a(self):<br>
+                                            return ConcreteProductA1()<br>
+
+                                        def create_product_b(self):<br>
+                                            return ConcreteProductB1()<br>
+
+                                    class ConcreteFactory2(AbstractFactory):<br>
+                                        def create_product_a(self):<br>
+                                            return ConcreteProductA2()<br>
+
+                                        def create_product_b(self):<br>
+                                            return ConcreteProductB2()<br>
+
+                                    # Interfaz para los productos A<br>
+                                    class AbstractProductA(ABC):<br>
+                                        @abstractmethod<br>
+                                        def operation_a(self):<br>
+                                            pass<br>
+
+                                    # Clases concretas que implementan productos A<br>
+                                    class ConcreteProductA1(AbstractProductA):<br>
+                                        def operation_a(self):<br>
+                                            return "Operación A para Producto A1"<br>
+
+                                    class ConcreteProductA2(AbstractProductA):<br>
+                                        def operation_a(self):<br>
+                                            return "Operación A para Producto A2"<br>
+
+                                    # Interfaz para los productos B<br>
+                                    class AbstractProductB(ABC):<br>
+                                        @abstractmethod<br>
+                                        def operation_b(self):<br>
+                                            pass<br>
+
+                                    # Clases concretas que implementan productos B<br>
+                                    class ConcreteProductB1(AbstractProductB):<br>
+                                        def operation_b(self):<br>
+                                            return "Operación B para Producto B1"<br>
+
+                                    class ConcreteProductB2(AbstractProductB):<br>
+                                        def operation_b(self):<br>
+                                            return "Operación B para Producto B2"<br>
+
+                                    # Uso de la Abstract Factory<br>
+                                    factory1 = ConcreteFactory1()<br>
+                                    product_a1 = factory1.create_product_a()<br>
+                                    product_b1 = factory1.create_product_b()<br>
+
+                                    print(product_a1.operation_a())  # Salida: "Operación A para Producto A1"<br>
+                                    print(product_b1.operation_b())  # Salida: "Operación B para Producto B1"<br>
+
+                                    factory2 = ConcreteFactory2()<br>
+                                    product_a2 = factory2.create_product_a()<br>
+                                    product_b2 = factory2.create_product_b()<br>
+
+                                    print(product_a2.operation_a())  # Salida: "Operación A para Producto A2"<br>
+                                    print(product_b2.operation_b())  # Salida: "Operación B para Producto B2"<br>
+
+                                </p>
+                             <br>
+                             <p class="description">Adapter (Adaptador):Permite que la interfaz de una clase existente se utilice como si fuera otra interfaz. </p><br>
+                             <p class="description">Ejemplo:
+                                    <br>
+                                    # Interfaz Target
+                                    class Target:<br>
+                                        def request(self):<br>
+                                            pass<br>
+
+                                    # Clase Adaptee (la clase que tiene la interfaz incompatible)<br>
+                                    class Adaptee:<br>
+                                        def specific_request(self):<br>
+                                            return "Solicitud específica"<br>
+
+                                    # Adaptador que conecta la interfaz Target con la interfaz Adaptee<br>
+                                    class Adapter(Target):<br>
+                                        def __init__(self, adaptee):<br>
+                                            self.adaptee = adaptee<br>
+
+                                        def request(self):<br>
+                                            return f"Adapter: {self.adaptee.specific_request()}"<br>
+
+                                    # Uso del Adapter<br>
+                                    adaptee = Adaptee()<br>
+                                    adapter = Adapter(adaptee)<br>
+
+                                    result = adapter.request()<br>
+                                    print(result)  # Salida: "Adapter: Solicitud específica"
+                                </p>
+                                <br>
+                             <p class="description">Observer (Observador): Define una dependencia uno a muchos entre objetos para que cuando uno de los objetos cambie su estado, todos sus dependientes sean notificados y actualizados automáticamente. </p><br>
+                                <p class="description">Ejemplo:
+                                    from abc import ABC, abstractmethod
+
+                                    # Interfaz Observer<br>
+                                    class Observer(ABC):<br>
+                                        @abstractmethod<br>
+                                        def update(self, message):<br>
+                                            pass<br>
+
+                                    # Clase ConcreteObserver<br>
+                                    class ConcreteObserver(Observer):<br>
+                                        def __init__(self, name):<br>
+                                            self.name = name<br>
+
+                                        def update(self, message):<br>
+                                            print(f"{self.name} recibió el mensaje: {message}")<br>
+
+                                    # Clase Subject (Sujeto)<br>
+                                    class Subject:<br>
+                                        def __init__(self):<br>
+                                            self._observers = []<br>
+
+                                        def add_observer(self, observer):<br>
+                                            self._observers.append(observer)<br>
+
+                                        def remove_observer(self, observer):<br>
+                                            self._observers.remove(observer)<br>
+
+                                        def notify_observers(self, message):<br>
+                                            for observer in self._observers:<br>
+                                                observer.update(message)<br>
+
+                                    # Uso del Observer<br>
+                                    subject = Subject()<br>
+
+                                    observer1 = ConcreteObserver("Observer 1")<br>
+                                    observer2 = ConcreteObserver("Observer 2")<br>
+
+                                    subject.add_observer(observer1)<br>
+                                    subject.add_observer(observer2)<br>
+
+                                    subject.notify_observers("¡Estado actualizado!")
+                                </p>
+                                <br>
+                             <p class="description">Strategy (Estrategia): Define una familia de algoritmos, encapsula cada uno y los hace intercambiables. Permite que el algoritmo varíe independientemente de los clientes que lo utilizan. </p><br>
+                                <p class="description">Ejemplo:
+                                    <br>
+                                    from abc import ABC, abstractmethod
+
+                                    # Interfaz para la estrategia<br>
+                                    class Strategy(ABC):<br>
+                                        @abstractmethod<br>
+                                        def execute(self):<br>
+                                            pass<br>
+
+                                    # Estrategia concreta 1<br>
+                                    class ConcreteStrategy1(Strategy):<br>
+                                        def execute(self):<br>
+                                            return "Estrategia concreta 1"<br>
+
+                                    # Estrategia concreta 2<br>
+                                    class ConcreteStrategy2(Strategy):<br>
+                                        def execute(self):<br>
+                                            return "Estrategia concreta 2"<br>
+
+                                    # Contexto que utiliza una estrategia<br>
+                                    class Context:<br>
+                                        def __init__(self, strategy):<br>
+                                            self._strategy = strategy<br>
+
+                                        def set_strategy(self, strategy):<br>
+                                            self._strategy = strategy<br>
+
+                                        def execute_strategy(self):<br>
+                                            return self._strategy.execute()<br>
+
+                                    # Uso del patrón Strategy<br>
+                                    context = Context(ConcreteStrategy1())<br>
+                                    result1 = context.execute_strategy()<br>
+                                    print(result1)  # Salida: "Estrategia concreta 1"<br>
+
+                                    context.set_strategy(ConcreteStrategy2())<br>
+                                    result2 = context.execute_strategy()<br>
+                                    print(result2)  # Salida: "Estrategia concreta 2"<br>
+                                </p>
 		                </div>
 
 		                <div>
-		                	<h3>Funciones de alto orden</h3>
-				             <p class="description">puedes pasar funciones como argumentos a otras funciones y devolver funciones</p>
+		                	<h3>Practica en clase  </h3>
+                             <p class="description">Con la breve explicacion que ya tuvimos anteriormente, durante la unidad se practicó un proyecto en el cual se aplicaban los conocimientos adquiridos en el trascurso del corte, aca podrán visualizar parte del código. </p>
+                             <p class="description">observer:<br>
+                                #clase publishe que se encarga de actualizar o notificar a los <br>
+                                #subscritores <br>
+                                class Publisher:<br>
+                                    #inicializar lista de observadores <br>
+                                    def __init__(this):<br>
+                                        this._observers = []<br>
+                                        
+                                    def addSubscribber(this, newSubscriber):<br>
+                                        this._observers.append(newSubscriber)<br>
+                                    
+                                    def removeSubscriber(this, subscriber):<br>
+                                        this._observers.remove(subscriber)<br>
+                                        
+                                    def notifySubscribe(this, message):<br>
+                                         #enviar message a todos los subscritores en la lista<br>
+                                        for subscriber in this._observers:<br>
+                                            subscriber.update(message)<br>
+                                            
+                                class Subscriber:<br>
+                                    def Update(this, message):<br>
+                                        pass<br>
+                                    
+                                class SubscriberType1(Subscriber):<br>
+                                    
+                                    def update(this, message):<br>
+                                        print(f"Subscriber 1 recibe mensage {message}")<br>
+                                        
+                                class SubscriberType2(Subscriber):<br>
+                                    
+                                    def update(this, message):<br>
+                                        print(f"Subscriber 2 recibe mensage {message}")<br>
+
+                                #metodo principal<br>
+                                if __name__ == "__main__":<br>
+                                    #crear publisher:<br>
+                                    publisher1 = Publisher()<br>
+                                    
+                                    #crear subscritores u "observar"<br>
+                                    observer1 = SubscriberType1<br>
+                                    observer2 = SubscriberType2<br>
+                                    
+                                    #agregamos subscritores:<br>
+                                    publisher1.addSubscribber(observer1)<br>
+                                    publisher1.addSubscribber(observer2) <br>
+
+                                    #notificar subscritores:<br>
+                                    publisher1.notifySubscribe("Nuevo mensaje para todo los usuarios de la lista")  <br>
+                             </p>
+                             <p class="description">Strategy y Adapter:<br>
+                                class MetodoPago:<br>
+                                def pagar(self, monto):<br>
+                                        pass<br>
+                                    
+                                        usuario = print("que metodo de pago desea usar? f/ 1.payu, f/2.mercado pago, f/3.paypal, f/4.PSE")<br>
+                                        
+                                        if usuario == "1":<br>
+                                           class PayU(MetodoPago):<br>
+                                            def pagar(self, monto):<br>
+                                            # Lógica para pagar con PayU en pesos<br>
+                                                pass <br>
+                                        
+                                        elif usuario == "2":<br>
+                                            class MercadoPago(MetodoPago):<br>
+                                                def pagar(self, monto):<br>
+                                                # Lógica para pagar con Mercado Pago en pesos<br>
+                                                    pass<br>
+                                                
+                                        elif usuario == "3":<br>
+                                            class PayPal(MetodoPago):<br>
+                                                def pagar(self, monto):<br>
+                                                # Lógica para pagar con PayPal en pesos<br>
+                                                    pass<br>
+                                        
+                                        elif usuario == "4":<br>
+                                            class PSE(MetodoPago):<br>
+                                                def pagar(self, monto):<br>
+                                                # Lógica para pagar con PSE en pesos<br>
+                                                    pass<br>
+                                                    
+                                      
+                                class Adaptador(MetodoPago):<br>
+                                    def __init__(self, metodo_pago, estrategia_conversion):<br>
+                                        self.metodo_pago = metodo_pago<br>
+                                        self.estrategia_conversion = estrategia_conversion<br>
+
+                                    def pagar(self, monto):<br>
+                                        monto_en_pesos = self.metodo_pago.pagar(monto)<br>
+                                        monto_en_dolares = self.estrategia_conversion.convertir_a_dolares(monto_en_pesos)<br>
+                                        return monto_en_dolares<br>
+
+                                # Crear instancias de los métodos de pago<br>
+                                payu = PayU()<br>
+                                mercado_pago = MercadoPago()<br>
+                                paypal = PayPal()<br>
+                                pse = PSE()<br>
+
+                                # Crear instancia de la estrategia de conversión<br>
+                                conversion_dolar = ConversionDolar()<br>
+
+                                # Crear instancias del adaptador para cada método de pago<br>
+                                adaptador_payu = Adaptador(payu, conversion_dolar)<br>
+                                adaptador_mercado_pago = Adaptador(mercado_pago, conversion_dolar)<br>
+                                adaptador_paypal = Adaptador(paypal, conversion_dolar)<br>
+                                adaptador_pse = Adaptador(pse, conversion_dolar)<br>
+
+                                # Realizar los pagos y obtener el monto en pesos y en dólares<br>
+                                monto = 1000<br>
+
+                                monto_payu = adaptador_payu.pagar(monto)<br>
+                                monto_mercado_pago = adaptador_mercado_pago.pagar(monto)<br>
+                                monto_paypal = adaptador_paypal.pagar(monto)<br>
+                                monto_pse = adaptador_pse.pagar(monto)<br>
+
+                                print(f"Monto en pesos (PayU): {monto_payu}")<br>
+                                print(f"Monto en pesos (Mercado Pago): {monto_mercado_pago}")<br>
+                                print(f"Monto en pesos (PayPal): {monto_paypal}")<br>
+                                print(f"Monto en pesos (PSE): {monto_pse}")<br>
+                             </p>
+
 		                </div>
 
-		                <div>
-		                	<h3>Funciones lambda</h3>
-				             <p class="description">Las expresiones lambda permiten crear funciones anónimas y se utilizan </p>
-		                </div>
 
                   </div>
                 </div>
